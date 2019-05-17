@@ -1,5 +1,7 @@
 /**
  * https://leetcode.com/problems/self-dividing-numbers/
+ * A self dividing number is one where each digit is a factor of the whole. Function returns array of self dividing numbers
+ * in range bounded by left and right, inclusive
  * @param {number} left
  * @param {number} right
  * @return {number[]}

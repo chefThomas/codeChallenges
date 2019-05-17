@@ -1,9 +1,11 @@
 
 /**
  * https://leetcode.com/problems/count-and-say/
+ * generate nth term in 'count and say'. 1 -> 11 -> 21 -> 1211 -> 111221 -> ... 
  * @param {number} n
  * @return {string}
  */
+
 const countAndSay = function(n) {
     
     if(n === 1) return '1';
