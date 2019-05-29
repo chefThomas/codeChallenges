@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <main>
+        <h1 id="title">Tree Order Form</h1>
+        <p id="description">Please fill all fields</p>
+            <form id="survey-form" action="#">
+                <label for="name" id="name-label">name</label>
+                <input type="text" id="name" placeholder="enter name" required>
+                <label for="email" id="email-label">email</label>
+                <input type="email" id="email" placeholder="name@email.com"required>
+                <label for="dropdown" id="dropdown-label">shipping</label>
+                <select id="dropdown">
+                    <option value="ground">ground - FREE</option>
+                    <option value="two-day">two-day - $5.95 </option>
+                    <option value="overnight">overnight - $12.95</option>
+                </select>
+                <label for="number" id="number-label">number</label>
+                <input type="number" id="number" placeholder="1-100" min=1 max=100>
+                <label for="life-stage" id="life-stage-label">life stage</label>
+                <div id="life-stage">
+                    <input id="seed" type="radio" name="life-stage" value="seed">
+                    <label for="seed">seed</label>
+                    <input id="seedling" type="radio" name="life-stage" value="seedling">
+                    <label for="seedling">seedling</label>
+                    <input id="sapling"type="radio" name="life-stage" value="sapling">
+                    <label for="sapling">sapling</label>
+                </div>
+                <label for="species" id="species-label">species</label>
+                <div id="shipping">
+                    <input id="oak" type="checkbox" name="oak">
+                    <label for="oak">oak</label>
+                    <input id="maple" type="checkbox" name="maple">
+                    <label for="maple">maple</label>
+                    <input id="beech" type="checkbox" name="beech">
+                    <label for="ground">beech</label>
+                </div>
+                <button class="button" type="submit">Place order</button>
+        </form>
+    </main>
+</body>
+</html>

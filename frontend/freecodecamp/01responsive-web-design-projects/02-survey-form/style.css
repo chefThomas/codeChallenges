@@ -1,0 +1,101 @@
+ body {
+     font-family: "Lato", "Arial", sans-serif;
+     color: white;
+     font-size: 14px;
+ }
+
+ main {
+     display: flex;
+     flex-direction: column;
+     /* align-items: center; */
+     padding: 1rem;
+ }
+
+ label {
+    margin-bottom: 2px;
+}
+
+form {
+   /* background: #bbbbbb; */
+   /* width: 100%; */
+}
+
+form > input, select {
+   margin-bottom: 1rem;
+   border-radius: 0.2rem;
+   border-style: none;
+   padding: 2px;
+}
+
+button {
+   background-color: rgb(255, 149, 31);
+   color: white;
+   border-style: none;
+   border-radius: 0.2rem;
+   width: 80%;
+   height: 2rem;
+   margin: auto;
+}
+
+button:hover {
+    border: 1px solid white;
+}
+
+ #title, #description {
+     color: rgb(255, 149, 31);
+     margin: auto;
+ }
+ #title {
+     margin-bottom: 0;
+
+     font-weight: 50;
+ }
+#description {
+     margin-top: 5px;
+     margin-bottom: 1rem;
+     font-size: 0.7rem;
+ }
+
+ #survey-form {
+     padding: .2rem;
+     background-image: linear-gradient(to top right, #4ed8f7, #26afeb 70%);
+     margin: auto;
+     padding: 1rem;
+     width: 100%;
+     min-width: 200px;
+     max-width: 250px;
+     border-radius: 3px;
+ }
+
+ #name, #email {
+     width: 100%;
+ }
+
+#number {
+    width: 60%;
+}
+
+#survey-form {
+    display: grid;
+    width: 50%;
+}
+
+#dropdown {
+    width: 100%;
+}
+#life-stage-label {
+    margin-bottom: 3px;
+} 
+
+#life-stage {
+    border-top: 1px solid rgb(255, 149, 31);
+    padding-top: 3px;
+    margin-bottom: 1rem;
+}
+
+#shipping {
+    border-top: 1px solid rgb(255, 149, 31);
+    padding-top: 3px;
+    margin-bottom: 1rem;
+}
+

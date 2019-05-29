@@ -1,0 +1,10 @@
+.dice-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,25 @@
+
+.fas {
+    font-size: 10rem;
+    color: #999AC6;
+    margin: 1rem;
+}
+
+.shake {
+    animation-name: shake;
+    animation-duration: 200ms;
+    animation-iteration-count: 5;
+    position: relative;
+}
+
+@keyframes shake {
+    0% {
+        right: -20px;
+    }
+    50% {
+        left: -20px;
+    }
+    100% {
+        right: -20px;
+    }
+}

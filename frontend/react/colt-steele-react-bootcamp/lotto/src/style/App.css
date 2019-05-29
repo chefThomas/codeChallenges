@@ -1,0 +1,7 @@
+.container {
+    max-width: 40%;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid #efefef;
+    color: #061A40;
+}
