@@ -1,6 +1,5 @@
 import React from 'react';
 import Display from './components/Display';
-import './style/App.css';
 
 function App() {
 
