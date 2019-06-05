@@ -1,0 +1,9 @@
+.Cell {
+    width: 40px;
+    height: 40px;
+    border: 1px dashed red;
+}
+
+.Cell-on {
+    background-color: yellow;
+}
