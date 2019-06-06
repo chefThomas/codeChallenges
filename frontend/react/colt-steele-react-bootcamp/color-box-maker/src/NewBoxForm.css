@@ -1,0 +1,5 @@
+form > input, label, select {
+    margin-bottom: 15px;
+    width: 100px;
+    margin: auto;
+}
