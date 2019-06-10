@@ -1,9 +1,14 @@
 .Cell {
-    width: 40px;
-    height: 40px;
-    border: 1px dashed red;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #734f96;
 }
 
 .Cell-on {
-    background-color: yellow;
+  background: radial-gradient(#ff8f87, #ff69b4);
+}
+
+.Cell-off {
+  background: linear-gradient(#d3b4d3, #c3a9d0);
 }

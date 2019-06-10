@@ -1,6 +1,9 @@
 .Board {
-    display: grid;
-    grid-template-columns: repeat(5, 40px);
-    grid-template-rows: repeat(5, 40px);
-    border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(5, 40px);
+  grid-template-rows: repeat(5, 40px);
+  grid-gap: 3px;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
 }
