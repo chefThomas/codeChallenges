@@ -1,0 +1,81 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  align-items: start;
+  padding-bottom: 3vw;
+
+  .footer-left,
+  .footer-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $turquoise-alpha;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    font-size: 4vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    width: 49%;
+    height: 24vw;
+  }
+
+  .footer-left {
+    color: $charcoal-alpha;
+    & > li {
+      color: $charcoal-alpha;
+      list-style: none;
+      &:hover {
+        color: $yellow-alpha;
+        cursor: pointer;
+      }
+    }
+
+    .table-contents {
+      margin-bottom: 0;
+      margin-top: 0;
+      font-weight: lighter;
+      color: $white-alpha;
+    }
+    .content {
+      list-style: none;
+      font-size: 3vw;
+    }
+  }
+
+  .footer-right {
+    .subscription-form {
+      @include flexColCenter;
+      .form-label {
+        align-self: center;
+        font-size: 4vw;
+      }
+      .data-email {
+        border: 2px solid white;
+        // background: rgba(0, 0, 0, 0);
+        height: 4vw;
+        color: $charcoal-alpha;
+        text-align: center;
+        font-size: 3vw;
+        margin-bottom: 2vw;
+        width: 90%;
+      }
+      .submit-button {
+        font-family: "Anton", sans-serif;
+        color: white;
+        text-transform: uppercase;
+        font-size: 4vw;
+        border: none;
+        font-weight: lighter;
+        width: 90%;
+        display: block;
+        bottom: 2vw;
+
+        &:hover {
+          color: $yellow-alpha;
+        }
+      }
+    }
+  }
+}

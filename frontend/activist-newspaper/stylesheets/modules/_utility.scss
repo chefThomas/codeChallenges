@@ -1,0 +1,22 @@
+// mixins and functions here.
+// todo create mixin to transform all text to uppercase
+// reset form
+
+@mixin flexRowCenter() {
+  // centers on both axes
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColCenter() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsiveBgImage() {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
