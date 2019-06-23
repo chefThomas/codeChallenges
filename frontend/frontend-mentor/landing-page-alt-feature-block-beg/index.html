@@ -12,6 +12,17 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+
     <title>
       Frontend Mentor | Huddle landing page with alternating feature blocks
     </title>
@@ -29,29 +40,65 @@
   </head>
   <body>
     <main>
-      <header role="banner">
-        <h1>
-          <img src="./images/logo.svg" alt="" />
-        </h1>
-      </header>
-      <section></section>
-    </main>
-    Try It Free Build The Community Your Fans Will Love Huddle re-imagines the
-    way we build communities. You have a voice, but so does your audience.
-    Create connections with your users as you engage in genuine discussion. Get
-    Started For Free Grow Together Generate meaningful discussions with your
-    audience and build a strong, loyal community. Think of the insightful
-    conversations you miss out on with a feedback form. Flowing Conversations
-    You wouldn't paginate a conversation in real life, so why do it online? Our
-    threads have just-in-time loading for a more natural flow. Your Users It
-    takes no time at all to integrate Huddle with your app's authentication
-    solution. This means, once signed in to your app, your users can start
-    chatting immediately. Ready To Build Your Community? Get Started For Free
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua +1-543-123-4567
-    example@huddle.com About Us What We Do FAQ Career Blog Contact Us &copy;
-    Copyright 2018 Huddle. All rights reserved.
+      <section class="intro" name="intro">
+        <div class="top-header" name="header">
+          <header role="banner">
+            <div class="banner-top-container">
+              <img
+                class="intro-logo"
+                src="./images/logo.svg"
+                alt="huddle logo"
+              />
+              <button class="button button-white">Try It Free</button>
+            </div>
+            <h1 class="header-top">Build The Community Your Fans Will Love</h1>
+          </header>
+        </div>
+        <p class="header-main-text">
+          Huddle re-imagines the way we build communities. You have a voice, but
+          so does your audience. Create connections with your users as you
+          engage in genuine discussion.
+        </p>
+        <button class="pink-button">Get Started For Free</button>
+        <img
+          class="huddle-mockup-img"
+          src="./images/illustration-mockups.svg"
+          alt="app layout for desktop and mobile"
+        />
+      </section>
 
+      <section name="app-function-cards">
+        <div class="card">
+          <h2>Grow Together</h2>
+          <p>
+            Generate meaningful discussions with your audience and build a
+            strong, loyal community. Think of the insightful conversations you
+            miss out on with a feedback form.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Flowing Conversations</h2>
+          <p>
+            You wouldn't paginate a conversation in real life, so why do it
+            online? Our threads have just-in-time loading for a more natural
+            flow.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Your Users</h2>
+          <p>
+            It takes no time at all to integrate Huddle with your app's
+            authentication solution. This means, once signed in to your app,
+            your users can start chatting immediately.
+          </p>
+        </div>
+      </section>
+    </main>
+    Ready To Build Your Community? Get Started For Free Lorem ipsum dolor sit
+    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua +1-543-123-4567 example@huddle.com About Us
+    What We Do FAQ Career Blog Contact Us &copy; Copyright 2018 Huddle. All
+    rights reserved.
     <footer>
       <p class="attribution">
         Challenge by
