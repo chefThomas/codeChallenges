@@ -2,11 +2,14 @@
   box-sizing: border-box; }
 
 body {
-  font-size: 18px; }
+  font-size: 18px;
+  background: #ffffff;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
 
 main {
-  width: 100%;
-  border: 1px solid red; }
+  width: 100%; }
 
 button {
   font-family: "Open Sans", sans-serif;
@@ -15,7 +18,7 @@ button {
   border-radius: 20px;
   padding-top: 7px;
   padding-bottom: 7px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); }
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1); }
 
 p {
   text-align: center;
@@ -23,18 +26,27 @@ p {
 
 h2 {
   text-align: center;
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem; }
+
+li {
+  list-style: none; }
+
+a {
+  color: white;
+  text-decoration: none; }
 
 .intro {
+  position: relative;
   display: grid;
   justify-items: center;
   align-items: center;
-  border: 1px solid black;
   width: 100%;
-  background: url("../../../images/bg-hero-mobile.svg"), linear-gradient(rgba(222, 244, 255, 0.7), rgba(222, 244, 255, 0.2));
+  background: url("../../../images/bg-hero-mobile.svg"), linear-gradient(rgba(222, 244, 255, 0.7), rgba(222, 244, 255, 0.5));
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: relative; }
+  background-position: relative;
+  margin-bottom: 4rem; }
   .intro .top-header {
     padding: 6vw 4vw; }
     .intro .top-header .banner-top-container {
@@ -56,7 +68,10 @@ h2 {
     .intro .top-header .header-top {
       font-family: "Poppins", sans-serif;
       text-align: center;
-      margin-bottom: 0.5rem; }
+      margin-bottom: 0.5rem;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto; }
   .intro .header-main-text {
     margin-top: 0;
     margin-bottom: 2rem;
@@ -72,3 +87,95 @@ h2 {
     width: 80%;
     height: auto;
     margin-bottom: 2rem; }
+
+.cards-section {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  padding-bottom: 15rem; }
+  .cards-section .card {
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    padding-top: 4rem;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 3rem; }
+    .cards-section .card .card-image {
+      width: 75%;
+      margin-bottom: 3rem; }
+    .cards-section .card .card-header {
+      margin-bottom: 0; }
+    .cards-section .card .card-paragraph {
+      color: #718c9e;
+      margin-bottom: 4rem;
+      width: 75%; }
+  .cards-section .floating-card {
+    background-color: white;
+    width: 95%;
+    padding-top: 2.5rem;
+    position: absolute;
+    bottom: -130px; }
+    .cards-section .floating-card .floating-card-header {
+      font-size: 1.3rem;
+      margin-bottom: 2rem; }
+    .cards-section .floating-card .pink-button {
+      width: 17rem;
+      height: 2.75rem;
+      color: white;
+      background: #ff52bf;
+      margin-bottom: 4.5rem;
+      width: 14rem;
+      margin-bottom: 3.5rem; }
+
+.footer {
+  font-family: "Open Sans", sans-serif;
+  background: #00252e;
+  width: 100%;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 11rem;
+  padding-bottom: 1.5rem; }
+  .footer .logo {
+    width: 45%;
+    margin-bottom: 2rem; }
+  .footer .contact-type {
+    position: relative;
+    display: flex;
+    align-items: baseline; }
+    .footer .contact-type .fas {
+      font-size: 1.4rem;
+      margin-top: 7px;
+      margin-right: 1.5rem; }
+    .footer .contact-type p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+      text-align: left;
+      font-size: 1.1rem; }
+  .footer nav * {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3rem; }
+  .footer nav ul {
+    padding-left: 0;
+    margin-bottom: 3rem; }
+    .footer nav ul li {
+      margin-bottom: 1.5rem; }
+  .footer .social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.8rem; }
+    .footer .social-media .icon-container {
+      border: 1px solid white;
+      border-radius: 50%;
+      width: 2.1rem;
+      padding: 5px 5px;
+      margin-right: 0.8rem;
+      display: flex;
+      justify-content: center; }
+  .footer .copy {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 3rem; }

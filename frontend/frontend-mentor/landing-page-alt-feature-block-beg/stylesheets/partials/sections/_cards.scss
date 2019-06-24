@@ -1,0 +1,47 @@
+.cards-section {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  padding-bottom: 15rem;
+  .card {
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    padding-top: 4rem;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 3rem;
+
+    .card-image {
+      width: 75%;
+      margin-bottom: 3rem;
+    }
+
+    .card-header {
+      margin-bottom: 0;
+    }
+
+    .card-paragraph {
+      color: #718c9e;
+      margin-bottom: 4rem;
+      width: 75%;
+    }
+  }
+
+  .floating-card {
+    background-color: white;
+    width: 95%;
+    padding-top: 2.5rem;
+    position: absolute;
+    bottom: -130px;
+    .floating-card-header {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    .pink-button {
+      @include pink-button;
+      width: 14rem;
+      margin-bottom: 3.5rem;
+    }
+  }
+}

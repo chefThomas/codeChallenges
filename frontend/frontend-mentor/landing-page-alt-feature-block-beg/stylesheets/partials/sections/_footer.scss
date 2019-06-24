@@ -1,0 +1,68 @@
+.footer {
+  font-family: $family-body;
+  background: $dark-cyan;
+  width: 100%;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 11rem;
+  padding-bottom: 1.5rem;
+  .logo {
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+  .contact-type {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    .fas {
+      font-size: 1.4rem;
+      margin-top: 7px;
+      margin-right: 1.5rem;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+      text-align: left;
+      font-size: 1.1rem;
+    }
+  }
+
+  nav * {
+    color: white;
+    font-family: $family-body;
+    font-size: 1.3rem;
+  }
+
+  nav ul {
+    padding-left: 0;
+    margin-bottom: 3rem;
+    li {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    .icon-container {
+      border: 1px solid white;
+      border-radius: 50%;
+      width: 2.1rem;
+      padding: 5px 5px;
+      margin-right: 0.8rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    margin-bottom: 1.8rem;
+  }
+
+  .copy {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 3rem;
+  }
+}
