@@ -25,10 +25,13 @@ p {
   text-align: center;
   font-family: "Open Sans", sans-serif; }
 
+h1 {
+  font-size: 1.5rem; }
+
 h2 {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem; }
+  font-size: 1.3rem; }
 
 li {
   list-style: none; }
@@ -54,66 +57,85 @@ a {
     align-items: center;
     width: 100%;
     margin-top: 2rem;
-    margin-bottom: 6rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem; }
+    margin-bottom: 5.5rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem; }
+    @media screen and (min-width: 700px) {
+      .intro .banner-top-container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-bottom: 4rem; } }
     .intro .banner-top-container .intro-logo {
       width: 8rem;
       top: 1rem;
       left: 1rem; }
+      @media screen and (min-width: 700px) {
+        .intro .banner-top-container .intro-logo {
+          width: 11rem; } }
     .intro .banner-top-container .button-white {
       right: 1rem;
       top: 1rem;
-      width: 7.5rem;
-      background-color: white; }
+      width: 6rem;
+      background-color: white;
+      font-size: 0.7rem; }
+      @media screen and (min-width: 700px) {
+        .intro .banner-top-container .button-white {
+          width: 11rem;
+          height: 2.5rem;
+          font-size: 0.8rem; } }
   .intro .col2 {
     display: flex;
     flex-direction: column;
     align-items: center; }
     @media screen and (min-width: 700px) {
       .intro .col2 {
-        flex-direction: row; } }
+        flex-direction: row;
+        padding: 0px 3rem;
+        justify-content: space-around; } }
     .intro .col2 .left-col {
-      border: 1px solid red;
       display: flex;
       flex-direction: column;
       align-items: center; }
       @media screen and (min-width: 700px) {
         .intro .col2 .left-col {
-          justify-content: flex-start;
-          width: 50%;
-          padding-left: 3rem; } }
+          align-items: flex-start;
+          width: 50%; } }
       .intro .col2 .left-col .header-top {
         font-family: "Poppins", sans-serif;
         text-align: center;
-        margin-bottom: 0.5rem;
-        width: 85%;
-        margin-left: auto;
-        margin-right: auto; }
+        margin-bottom: 1.5rem;
+        line-height: 150%;
+        width: 80%; }
         @media screen and (min-width: 700px) {
           .intro .col2 .left-col .header-top {
             text-align: left;
-            margin-left: 0; } }
+            line-height: 140%;
+            margin-left: 0;
+            font-size: 2.4rem;
+            width: 70%; } }
       .intro .col2 .left-col .header-main-text {
         margin-top: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
         padding-left: 1.5rem;
-        padding-right: 1.5rem; }
+        padding-right: 1.5rem;
+        line-height: 150%; }
         @media screen and (min-width: 700px) {
           .intro .col2 .left-col .header-main-text {
             text-align: left;
-            padding-left: 0; } }
+            padding-left: 0;
+            width: 90%;
+            font-size: 1.3rem;
+            line-height: 135%; } }
       .intro .col2 .left-col .pink-button {
-        width: 17rem;
-        height: 2.75rem;
+        height: 3rem;
         color: white;
         background: #ff52bf;
-        margin-bottom: 4.5rem; }
+        width: 17rem;
+        margin-bottom: 5rem; }
         @media screen and (min-width: 700px) {
           .intro .col2 .left-col .pink-button {
             align-self: flex-start; } }
     .intro .col2 .huddle-mockup-img {
-      border: 1px solid green;
       width: 80%;
       height: auto;
       margin-bottom: 2rem; }
@@ -134,19 +156,48 @@ a {
     display: grid;
     justify-items: center;
     margin-bottom: 3rem; }
+    @media screen and (min-width: 700px) {
+      .cards-section .card {
+        display: flex;
+        align-items: center;
+        height: 20rem;
+        padding-left: 6rem;
+        justify-content: space-between; } }
     .cards-section .card .card-image {
       width: 75%;
-      margin-bottom: 3rem; }
-    .cards-section .card .card-header {
-      margin-bottom: 0; }
-    .cards-section .card .card-paragraph {
+      margin-bottom: 2.75rem; }
+      @media screen and (min-width: 700px) {
+        .cards-section .card .card-image {
+          width: auto;
+          height: 100%; } }
+    @media screen and (min-width: 700px) {
+      .cards-section .card .card-col1 {
+        display: grid;
+        justify-items: left;
+        margin-left: 3rem;
+        width: 45%; } }
+    .cards-section .card .card-col1 .card-header {
+      margin-bottom: 0.5rem; }
+    .cards-section .card .card-col1 .card-paragraph {
       font-size: 0.95rem;
       color: #718c9e;
-      margin-bottom: 4rem;
-      width: 75%; }
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem; }
+      @media screen and (min-width: 700px) {
+        .cards-section .card .card-col1 .card-paragraph {
+          margin-left: 0;
+          text-align: left;
+          margin-top: 0; } }
   .cards-section .floating-card {
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    justify-items: center;
+    margin-bottom: 3rem;
     background-color: white;
     width: 95%;
+    max-width: 570px;
     padding-top: 2.5rem;
     position: absolute;
     bottom: -130px; }
@@ -154,11 +205,9 @@ a {
       font-size: 1.3rem;
       margin-bottom: 2rem; }
     .cards-section .floating-card .pink-button {
-      width: 17rem;
-      height: 2.75rem;
+      height: 3rem;
       color: white;
       background: #ff52bf;
-      margin-bottom: 4.5rem;
       width: 14rem;
       margin-bottom: 3.5rem; }
 
@@ -172,7 +221,7 @@ a {
   padding-top: 11rem;
   padding-bottom: 1.5rem; }
   .footer .logo {
-    width: 45%;
+    width: 11rem;
     margin-bottom: 2rem; }
   .footer .contact-type {
     position: relative;
@@ -194,6 +243,7 @@ a {
     font-size: 1.3rem; }
   .footer nav ul {
     padding-left: 0;
+    margin-top: 3rem;
     margin-bottom: 3rem; }
     .footer nav ul li {
       margin-bottom: 1.5rem; }
@@ -211,5 +261,5 @@ a {
       justify-content: center; }
   .footer .copy {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-bottom: 3rem; }

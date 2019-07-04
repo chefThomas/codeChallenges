@@ -1,3 +1,5 @@
+//TODO left justify text and header in cards on desktop
+
 .cards-section {
   position: relative;
   display: grid;
@@ -8,30 +10,64 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
     padding-top: 4rem;
+    // padding-left: 3rem;
     display: grid;
     justify-items: center;
     margin-bottom: 3rem;
+    @media screen and (min-width: 700px) {
+      display: flex;
+      align-items: center;
+      height: 20rem;
+      padding-left: 6rem;
+      justify-content: space-between;
+    }
 
     .card-image {
       width: 75%;
-      margin-bottom: 3rem;
+      margin-bottom: 2.75rem;
+      @media screen and (min-width: 700px) {
+        width: auto;
+        height: 100%;
+      }
     }
 
-    .card-header {
-      margin-bottom: 0;
-    }
+    .card-col1 {
+      @media screen and (min-width: 700px) {
+        display: grid;
+        justify-items: left;
+        margin-left: 3rem;
+        width: 45%;
+      }
+      .card-header {
+        margin-bottom: 0.5rem;
+      }
 
-    .card-paragraph {
-      font-size: 0.95rem;
-      color: #718c9e;
-      margin-bottom: 4rem;
-      width: 75%;
+      .card-paragraph {
+        font-size: 0.95rem;
+        color: #718c9e;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+        // width: 50%;
+
+        @media screen and(min-width:700px) {
+          margin-left: 0;
+          text-align: left;
+          margin-top: 0;
+        }
+      }
     }
   }
 
   .floating-card {
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    justify-items: center;
+    margin-bottom: 3rem;
     background-color: white;
     width: 95%;
+    max-width: 570px;
     padding-top: 2.5rem;
     position: absolute;
     bottom: -130px;

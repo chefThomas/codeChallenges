@@ -1,0 +1,19 @@
+li {
+  display: flex;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.icon {
+  width: 0.8rem;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.hide {
+  display: none;
+}
