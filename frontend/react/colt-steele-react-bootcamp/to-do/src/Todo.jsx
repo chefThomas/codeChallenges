@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import editIcon from "./edit-icon.png";
 import trashIcon from "./trash-icon.png";
-import "./styles/Todo.css";
+import "./css/components/Todo.css";
 
 export default class Todo extends Component {
   state = {
@@ -39,14 +39,16 @@ export default class Todo extends Component {
 
   render() {
     return (
-      <li id={this.props.id}>
-        <div className={this.props.editing ? "hide" : ""}>
-          <span
+      <li className="task-wrapper" id={this.props.id}>
+        <div className={this.props.editing ? "hide" : "task-content"}>
+          <div
             onClick={this.handleCompleteTask}
-            className={this.props.complete ? "done" : ""}
+            className={`task-text ${this.props.complete ? "done" : ""} ${
+              this.props.editing ? "hide" : ""
+            }`}
           >
             {this.props.name}
-          </span>
+          </div>
           <div className="icons">
             <img
               onClick={this.handleFormDisplay}
@@ -66,12 +68,17 @@ export default class Todo extends Component {
         </div>
         <form
           onSubmit={this.handleEdit}
-          className={this.props.editing ? "" : "hide"}
+          className={`edit-form ${this.props.editing ? "" : "hide"}`}
           action=""
         >
           <label htmlFor="editTask" />
-          <input onChange={this.handleChange} type="text" />
-          <input type="submit" />
+          <input
+            onChange={this.handleChange}
+            type="text"
+            className="edit-form-input"
+            required
+          />
+          <input className="edit-button" type="submit" />
         </form>
       </li>
     );

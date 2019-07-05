@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Todo from "./Todo";
 import AddTodoForm from "./AddTodoForm";
 import shortid from "shortid";
+// import "./css/components/TodoList.css";
 
 export default class TodoList extends Component {
   state = {
@@ -72,10 +73,10 @@ export default class TodoList extends Component {
 
   render() {
     return (
-      <div>
-        <h1>to-do</h1>
+      <div className="TodoList">
+        <h1 className="header-center">Task Force</h1>
         <AddTodoForm addTask={this.addTask} />
-        {this.generateTasks()}
+        <div className="tasks-wrapper">{this.generateTasks()}</div>
       </div>
     );
   }
