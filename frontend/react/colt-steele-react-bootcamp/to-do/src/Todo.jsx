@@ -77,6 +77,8 @@ export default class Todo extends Component {
             type="text"
             className="edit-form-input"
             required
+            value={this.state.task}
+            placeholder={this.props.name}
           />
           <input className="edit-button" type="submit" />
         </form>
