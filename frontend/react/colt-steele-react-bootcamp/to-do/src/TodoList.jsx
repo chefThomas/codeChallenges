@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Todo from "./Todo";
 import AddTodoForm from "./AddTodoForm";
 import shortid from "shortid";
-// import "./css/components/TodoList.css";
 
 export default class TodoList extends Component {
   state = {
@@ -72,11 +71,15 @@ export default class TodoList extends Component {
   };
 
   render() {
+    // TODO put warning bar here to enter task if none in state
     return (
       <div className="TodoList">
         <h1 className="header-center">Task Force</h1>
         <AddTodoForm addTask={this.addTask} />
         <div className="tasks-wrapper">{this.generateTasks()}</div>
+        <div className={this.state.tasks.length ? "hide" : "alert"}>
+          Nothing to see here. Enter a task.
+        </div>
       </div>
     );
   }

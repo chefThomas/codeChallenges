@@ -33,7 +33,7 @@ export default class AddTodoForm extends Component {
             value={this.state.name}
             required
           />
-          <small className="sub-text">There is no try </small>
+          <small className="sub-text">{`There is no try <(°.°)>`} </small>
           <br />
           <input className="button" type="submit" />
         </form>

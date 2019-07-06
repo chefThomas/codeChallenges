@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import editIcon from "./edit-icon.png";
 import trashIcon from "./trash-icon.png";
-import "./css/components/Todo.css";
+import "./css/main.css";
 
 export default class Todo extends Component {
-  state = {
-    task: ""
-  };
+  constructor(props) {
+    super(props);
+    this.state = { task: this.props.name };
+  }
 
-  //
   getId = evt => evt.target.closest("[id]").getAttribute("id");
 
   handleCompleteTask = e => {
@@ -78,7 +78,7 @@ export default class Todo extends Component {
             className="edit-form-input"
             required
             value={this.state.task}
-            placeholder={this.props.name}
+            // placeholder={this.props.name}
           />
           <input className="edit-button" type="submit" />
         </form>
