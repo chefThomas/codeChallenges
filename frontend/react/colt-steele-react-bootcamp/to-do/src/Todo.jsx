@@ -80,7 +80,7 @@ export default class Todo extends Component {
             value={this.state.task}
             // placeholder={this.props.name}
           />
-          <input className="edit-button" type="submit" />
+          <input className="edit-button" type="submit" value="Save" />
         </form>
       </li>
     );

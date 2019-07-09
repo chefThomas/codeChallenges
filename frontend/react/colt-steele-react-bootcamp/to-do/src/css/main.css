@@ -27,9 +27,13 @@
         box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
     .form-container form .sub-text {
       color: #6c757d;
-      font-size: 0.8rem; }
+      font-size: 0.8rem;
+      margin-bottom: 2rem; }
     .form-container form .button {
       color: #fff;
+      margin-left: auto;
+      margin-right: auto;
+      width: 25%;
       background-color: #007bff;
       border-color: #007bff;
       border: 1px solid transparent;
@@ -52,7 +56,8 @@
   margin-right: auto;
   border: 0.1rem solid #ececec;
   border-radius: 8px;
-  padding: 1rem; }
+  padding: 1rem;
+  box-shadow: 5px 5px 5px #efefef; }
 
 .task-wrapper {
   list-style: none;
@@ -123,7 +128,8 @@
 
 .TodoList .header-center {
   text-align: center;
-  font-family: "Coda", cursive; }
+  font-family: "Coda", cursive;
+  margin-bottom: 5rem; }
 
 .TodoList .tasks-wrapper {
   width: 98%; }
