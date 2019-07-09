@@ -1,3 +1,25 @@
 .Button {
-  width: 30%;
+  width: 6rem;
+  margin-bottom: 2rem;
+  height: 6rem;
+  border: 3px solid #36454f;
+  border-radius: 50%;
+  color: #fff;
+  font-size: inherit;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: rotate(40deg);
+    box-shadow: 0px 0px 12px aqua;
+    background: rgba(0, 255, 255, 0.1);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px 0px 12px aqua;
+  }
+}
+
+.hide {
+  visibility: hidden;
 }

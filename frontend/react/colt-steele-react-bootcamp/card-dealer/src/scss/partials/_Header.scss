@@ -1,0 +1,38 @@
+.Header-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 80%;
+  max-width: 500px;
+  .Header {
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    color: rgb(54, 69, 79);
+    border-top: 3px solid rgb(54, 69, 79);
+    border-bottom: 3px solid rgb(54, 69, 79);
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .Header-title {
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+    .Header-counter {
+      font-size: 1.5rem;
+      font-family: "Lato", sans-serif;
+      width: 60;
+      padding: 10px;
+      border: 2px solid rgb(54, 69, 79);
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 2rem;
+
+      @media screen and (max-width: 500px) {
+        width: 100%;
+      }
+    }
+  }
+}

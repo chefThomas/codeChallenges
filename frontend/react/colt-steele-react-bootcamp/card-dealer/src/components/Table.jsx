@@ -3,14 +3,18 @@ import axios from "axios";
 
 import Button from "./Button";
 import Card from "./Card";
+import Header from "./Header";
 
 //CSS
 import "../css/main.css";
 
+import deal from "../deal.png";
+
 export default class Table extends Component {
   state = {
     deck_id: "",
-    hand: []
+    hand: [],
+    remaining: 52
   };
 
   // get deck id from card API
@@ -28,16 +32,25 @@ export default class Table extends Component {
     }/draw/?count=1
     `;
     const res = await axios.get(url);
-    const imageUrl = await res.data.cards[0].image;
-    const rotation = this.generateRotationCSS();
-
-    this.setState(st => ({ hand: [...st.hand, { imageUrl, rotation }] }));
+    const imageUrl = res.data.cards[0].image;
+    const transform = this.generateRotationCSS();
+    // const translation = this.generateTranslationCSS();
+    const remaining = res.data.remaining;
+    console.log(transform);
+    this.setState(st => ({
+      hand: [...st.hand, { imageUrl, transform }],
+      remaining
+    }));
   };
 
   generateRotationCSS = () => {
-    const rand = Math.ceil(Math.random() * 360);
+    const randDeg = Math.ceil(Math.random() * 45);
+    const randPx = () => Math.floor(Math.random() * 20);
+    const sign = -1;
+
     return {
-      transform: `rotate(${rand}deg)`
+      transform: `rotate(${randDeg}deg) translate(${randPx() *
+        sign}px, ${randPx() * sign}px)`
     };
   };
 
@@ -49,7 +62,7 @@ export default class Table extends Component {
           src={card.imageUrl}
           zIndex={zIndex}
           className="Card"
-          style={card.rotation}
+          style={card.transform}
         />
       );
       zIndex++;
@@ -60,8 +73,12 @@ export default class Table extends Component {
   render() {
     return (
       <div className="Table">
-        <Button drawCard={this.drawCard} />
+        <Header
+          cardsRemaining={this.state.remaining}
+          drawCard={this.drawCard}
+        />
         <div className="hand">{this.renderHand()}</div>
+        <Button cardsRemaining={this.state.remaining} addCard={this.drawCard} />
       </div>
     );
   }

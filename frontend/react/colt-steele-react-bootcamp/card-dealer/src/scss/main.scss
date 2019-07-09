@@ -1,3 +1,21 @@
 @import "./partials/Table";
 @import "./partials/Card";
 @import "./partials/Button";
+@import "./partials/Header";
+
+// html {
+//   background: url(../poker-table.jpg) no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
+
+* {
+  box-sizing: border-box;
+}
+.App {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
