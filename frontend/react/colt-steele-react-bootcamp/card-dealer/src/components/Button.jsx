@@ -12,7 +12,8 @@ export default class Button extends Component {
   render() {
     return (
       <button
-        className={this.props.cardsRemaining ? "Button" : "hide"}
+        className="Button"
+        disabled={!this.props.cardsRemaining}
         onClick={this.handleClick}
       >
         <img className="deal-icon" src={deal} alt="deal card button" />

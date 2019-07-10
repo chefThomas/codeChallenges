@@ -1,0 +1,31 @@
+.Shuffle {
+  z-index: 100;
+  position: absolute;
+  top: 50vh;
+  background-color: rgba(221, 221, 221, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgba(0, 221, 221, 0.8);
+    cursor: pointer;
+  }
+
+  &-icon {
+    width: 6rem;
+  }
+
+  &:focus {
+    background-color: rgba(255, 165, 0, 0.8);
+    outline: none;
+    // background: rgba(0, 255, 255, 0.1);
+  }
+}
+
+.hide {
+  display: none;
+}

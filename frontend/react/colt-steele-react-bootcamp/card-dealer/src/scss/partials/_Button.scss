@@ -1,4 +1,6 @@
 .Button {
+  position: absolute;
+  bottom: 1rem;
   width: 6rem;
   margin-bottom: 2rem;
   height: 6rem;
@@ -6,17 +8,24 @@
   border-radius: 50%;
   color: #fff;
   font-size: inherit;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 
   &:hover {
     transform: rotate(40deg);
-    box-shadow: 0px 0px 12px aqua;
+    box-shadow: 0px 0px 10px aqua;
     background: rgba(0, 255, 255, 0.1);
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0px 0px 12px aqua;
+    // box-shadow: 0px 0px 12px aqua;
+  }
+
+  &:active {
+    outline: none;
+    // box-shadow: 0px 0px 12px orange;
+    border: 3px solid #36454f;
+    transform: scale(1);
   }
 }
 

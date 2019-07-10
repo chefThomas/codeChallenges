@@ -4,11 +4,9 @@ import axios from "axios";
 import Button from "./Button";
 import Card from "./Card";
 import Header from "./Header";
+import Shuffle from "./Shuffle";
 
-//CSS
 import "../css/main.css";
-
-import deal from "../deal.png";
 
 export default class Table extends Component {
   state = {
@@ -33,8 +31,7 @@ export default class Table extends Component {
     `;
     const res = await axios.get(url);
     const imageUrl = res.data.cards[0].image;
-    const transform = this.generateRotationCSS();
-    // const translation = this.generateTranslationCSS();
+    const transform = this.generateTransformCss();
     const remaining = res.data.remaining;
     console.log(transform);
     this.setState(st => ({
@@ -43,15 +40,28 @@ export default class Table extends Component {
     }));
   };
 
-  generateRotationCSS = () => {
-    const randDeg = Math.ceil(Math.random() * 45);
+  generateTransformCss = () => {
+    const randDeg = Math.ceil(Math.random() * 25);
     const randPx = () => Math.floor(Math.random() * 20);
-    const sign = -1;
+    const sign = () => (Math.random() > 0.5 ? 1 : -1);
 
     return {
-      transform: `rotate(${randDeg}deg) translate(${randPx() *
-        sign}px, ${randPx() * sign}px)`
+      transform: `rotate(${randDeg * sign()}deg) translate(${randPx() *
+        sign()}px, ${randPx() * sign()}px)`
     };
+  };
+
+  shuffleCards = async () => {
+    // api call for shuffle
+    const url = `https://deckofcardsapi.com/api/deck/${
+      this.state.deck_id
+    }/shuffle/`;
+
+    const res = await axios.get(url);
+
+    // empty state.hand and reset remaining
+    this.setState({ hand: [], ...res.data });
+    console.log("in shuffle cards");
   };
 
   renderHand = () => {
@@ -76,6 +86,10 @@ export default class Table extends Component {
         <Header
           cardsRemaining={this.state.remaining}
           drawCard={this.drawCard}
+        />
+        <Shuffle
+          shuffleCards={this.shuffleCards}
+          className={this.state.remaining ? "hide" : "Shuffle"}
         />
         <div className="hand">{this.renderHand()}</div>
         <Button cardsRemaining={this.state.remaining} addCard={this.drawCard} />
