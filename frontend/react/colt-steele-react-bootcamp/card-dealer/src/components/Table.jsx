@@ -30,9 +30,9 @@ export default class Table extends Component {
     }/draw/?count=1
     `;
     const res = await axios.get(url);
-    const imageUrl = res.data.cards[0].image;
+    const imageUrl = await res.data.cards[0].image;
+    const remaining = await res.data.remaining;
     const transform = this.generateTransformCss();
-    const remaining = res.data.remaining;
     console.log(transform);
     this.setState(st => ({
       hand: [...st.hand, { imageUrl, transform }],

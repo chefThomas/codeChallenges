@@ -1,11 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class ApiRequestButton extends Component {
-  handleClick = e => {
+function ApiRequestButton(props) {
+  const handleClick = e => {
     console.log("in handle click");
-    this.props.getJokes();
+    props.getJokes();
   };
-  render() {
-    return <button onClick={this.handleClick}>Get Jokes</button>;
-  }
+  return (
+    <div>
+      <button onClick={handleClick}>Get Jokes</button>
+    </div>
+  );
 }
+
+export default ApiRequestButton;

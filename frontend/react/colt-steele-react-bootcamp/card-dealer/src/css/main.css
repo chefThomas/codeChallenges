@@ -22,7 +22,7 @@
 
 .Card {
   position: absolute;
-  top: 35;
+  top: 5rem;
   margin-top: 1rem; }
 
 .Button {
@@ -86,7 +86,7 @@
 .Shuffle {
   z-index: 100;
   position: absolute;
-  top: 50vh;
+  top: 30rem;
   background-color: rgba(221, 221, 221, 0.9);
   border: none;
   border-radius: 50%;
