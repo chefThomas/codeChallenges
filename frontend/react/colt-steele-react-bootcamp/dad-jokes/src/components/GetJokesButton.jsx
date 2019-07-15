@@ -1,15 +1,15 @@
 import React from "react";
 
-function ApiRequestButton(props) {
+function GetJokesButton(props) {
   const handleClick = e => {
     console.log("in handle click");
     props.getJokes();
   };
   return (
-    <div>
+    <div className="GetJokeButton">
       <button onClick={handleClick}>Get Jokes</button>
     </div>
   );
 }
 
-export default ApiRequestButton;
+export default GetJokesButton;

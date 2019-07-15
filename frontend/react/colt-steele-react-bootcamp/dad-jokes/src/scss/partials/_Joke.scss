@@ -1,0 +1,20 @@
+.Joke {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+
+  .vote-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 1rem;
+
+    & * {
+      margin-right: 0.3rem;
+    }
+  }
+  & * {
+    display: block;
+  }
+}

@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .container .JokeList {
+    width: 80%;
+    height: 90vh;
+    border: 1px solid red;
+    display: flex;
+    overflow-y: scroll; }
+    .container .JokeList-jokes {
+      width: 100%; }
+
+.App {
+  display: flex;
+  justify-content: center;
+  border: 1px solid green;
+  width: 90%; }
+
+.Joke {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem; }
+  .Joke .vote-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 1rem; }
+    .Joke .vote-container * {
+      margin-right: 0.3rem; }
+  .Joke * {
+    display: block; }

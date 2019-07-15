@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import ApiRequestButton from "./ApiRequestButton";
+import GetJokesButton from "./GetJokesButton";
 import Joke from "./Joke";
 import axios from "axios";
+
+import "../css/main.css";
 
 export default class JokeList extends Component {
   state = {
@@ -9,7 +11,10 @@ export default class JokeList extends Component {
   };
 
   componentDidMount() {
-    this.get10UniqueJokes();
+    // set state to jokes in local storage. If none, then query API
+    const localJokes = JSON.parse(window.localStorage.getItem("jokes"));
+    console.log(localJokes);
+    localJokes ? this.setState({ jokes: localJokes }) : this.get10UniqueJokes();
   }
 
   // get single unique joke
@@ -27,15 +32,23 @@ export default class JokeList extends Component {
     }
   };
 
+  componentDidUpdate() {
+    window.localStorage.setItem("jokes", JSON.stringify(this.state.jokes));
+  }
+
   updateVote = (jokeId, voteButton) => {
     console.log(jokeId, voteButton);
     this.setState(st => ({
-      jokes: st.jokes.map(joke => {
-        const voteCountAdjust = voteButton === "upVote" ? 1 : -1;
-        return joke.id === jokeId
-          ? { ...joke, votes: joke.votes + voteCountAdjust }
-          : joke;
-      })
+      jokes: st.jokes
+        .map(joke => {
+          const voteCountAdjust = voteButton === "upVote" ? 1 : -1;
+          return joke.id === jokeId
+            ? { ...joke, votes: joke.votes + voteCountAdjust }
+            : joke;
+        })
+        .sort((jokeA, jokeB) => {
+          return jokeB.votes - jokeA.votes;
+        })
     }));
   };
 
@@ -47,9 +60,7 @@ export default class JokeList extends Component {
       let joke = await this.getJoke();
       tenUniqueJokes.push({ ...joke, votes: 0 });
     }
-
     this.setState(st => ({ jokes: [...st.jokes, ...tenUniqueJokes] }));
-    console.log(this.state);
     tenUniqueJokes = [];
   };
 
@@ -64,9 +75,11 @@ export default class JokeList extends Component {
 
   render() {
     return (
-      <div>
-        <ApiRequestButton getJokes={this.get10UniqueJokes} />
-        {this.renderJokes()}
+      <div className="container">
+        <GetJokesButton getJokes={this.get10UniqueJokes} />
+        <div className="JokeList">
+          <div className="JokeList-jokes">{this.renderJokes()}</div>
+        </div>
       </div>
     );
   }
