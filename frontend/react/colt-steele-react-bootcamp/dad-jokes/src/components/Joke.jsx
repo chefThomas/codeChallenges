@@ -3,14 +3,10 @@ import React, { Component } from "react";
 import "../css/main.css";
 
 export default class Joke extends Component {
-  // // default props votes = 0
-  // static defaultProps = {
-  //   votes: 0
-  // };
-
   handleClick = e => {
     const voteButton = e.target.getAttribute("name");
     const jokeId = e.target.parentNode.parentNode.getAttribute("id");
+    console.log();
     this.props.handleVote(jokeId, voteButton);
   };
 

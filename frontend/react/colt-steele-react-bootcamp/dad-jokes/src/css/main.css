@@ -9,6 +9,11 @@
     overflow-y: scroll; }
     .container .JokeList-jokes {
       width: 100%; }
+    .container .JokeList .loader {
+      width: 100%; }
+    .container .JokeList .hide {
+      display: none;
+      width: 100%; }
 
 .App {
   display: flex;
@@ -69,3 +74,6 @@
     .GetJokeButton .joke-button:active {
       box-shadow: inset 0 0 8px #000000;
       font-size: 0.8rem; }
+
+* {
+  box-sizing: border-box; }

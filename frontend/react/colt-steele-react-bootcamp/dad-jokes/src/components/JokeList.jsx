@@ -5,16 +5,21 @@ import axios from "axios";
 
 import "../css/main.css";
 
+import loader from "../loading-icon.gif";
+
 export default class JokeList extends Component {
   state = {
-    jokes: []
+    jokes: [],
+    loading: true
   };
 
   componentDidMount() {
     // set state to jokes in local storage. If none, then query API
     const localJokes = JSON.parse(window.localStorage.getItem("jokes"));
     console.log(localJokes);
-    localJokes ? this.setState({ jokes: localJokes }) : this.get10UniqueJokes();
+    localJokes
+      ? this.setState({ jokes: localJokes, loading: false })
+      : this.get10UniqueJokes();
   }
 
   // get single unique joke
@@ -55,12 +60,15 @@ export default class JokeList extends Component {
   // get jokes in 10 count batch and sets state
   get10UniqueJokes = async () => {
     let tenUniqueJokes = [];
-
+    this.setState(st => ({ ...st, loading: true }));
     while (tenUniqueJokes.length < 10) {
       let joke = await this.getJoke();
       tenUniqueJokes.push({ ...joke, votes: 0 });
     }
-    this.setState(st => ({ jokes: [...st.jokes, ...tenUniqueJokes] }));
+    this.setState(st => ({
+      jokes: [...st.jokes, ...tenUniqueJokes],
+      loading: false
+    }));
     tenUniqueJokes = [];
   };
 
@@ -78,7 +86,14 @@ export default class JokeList extends Component {
       <div className="container">
         <GetJokesButton getJokes={this.get10UniqueJokes} />
         <div className="JokeList">
-          <div className="JokeList-jokes">{this.renderJokes()}</div>
+          <img
+            className={this.state.loading ? "loader" : "hide"}
+            src={loader}
+            alt="loading icon"
+          />
+          <div className={this.state.loading ? "hide" : "JokeList-jokes"}>
+            {this.renderJokes()}
+          </div>
         </div>
       </div>
     );
