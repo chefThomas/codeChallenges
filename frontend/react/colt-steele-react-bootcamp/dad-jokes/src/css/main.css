@@ -1,11 +1,10 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 95%; }
   .container .JokeList {
-    width: 80%;
     height: 90vh;
-    border: 1px solid red;
     display: flex;
     overflow-y: scroll; }
     .container .JokeList-jokes {
@@ -14,20 +13,59 @@
 .App {
   display: flex;
   justify-content: center;
-  border: 1px solid green;
-  width: 90%; }
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #efefef;
+  padding: 1rem;
+  background: #199fa1; }
 
 .Joke {
-  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 1rem; }
+  padding: 1rem;
+  border-top: 1px solid #efefef;
+  background: #fff; }
   .Joke .vote-container {
     display: flex;
     flex-wrap: nowrap;
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    align-items: center; }
+    .Joke .vote-container .fas {
+      cursor: pointer;
+      color: tomato; }
+    .Joke .vote-container .vote-count {
+      border: 2px solid grey;
+      border-radius: 50%;
+      width: 1.2rem;
+      height: 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
     .Joke .vote-container * {
       margin-right: 0.3rem; }
   .Joke * {
     display: block; }
+
+.GetJokeButton {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  width: 40%;
+  display: flex;
+  justify-content: center; }
+  .GetJokeButton .joke-button {
+    border-radius: 50%;
+    border: 4px solid #d9e1e5;
+    height: 5rem;
+    width: 5rem;
+    background-color: tomato;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: transform 0.3s, font-size 0.1s;
+    margin-right: 1.2rem; }
+    .GetJokeButton .joke-button:hover {
+      transform: scale(1.02) translateY(1px); }
+    .GetJokeButton .joke-button:active {
+      box-shadow: inset 0 0 8px #000000;
+      font-size: 0.8rem; }

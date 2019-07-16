@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/main.css";
 
 function GetJokesButton(props) {
   const handleClick = e => {
@@ -7,7 +8,9 @@ function GetJokesButton(props) {
   };
   return (
     <div className="GetJokeButton">
-      <button onClick={handleClick}>Get Jokes</button>
+      <button className="joke-button" onClick={handleClick}>
+        Get Jokes
+      </button>
     </div>
   );
 }

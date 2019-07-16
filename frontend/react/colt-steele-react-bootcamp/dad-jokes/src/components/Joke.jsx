@@ -23,7 +23,7 @@ export default class Joke extends Component {
             onClick={this.handleClick}
             className="fas fa-arrow-up"
           />
-          <span>{this.props.votes}</span>
+          <span className="vote-count">{this.props.votes}</span>
           <i
             name="downVote"
             onClick={this.handleClick}
