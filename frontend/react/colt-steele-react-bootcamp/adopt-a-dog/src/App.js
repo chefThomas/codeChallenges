@@ -14,16 +14,6 @@ function App() {
   App.defaultProps = {
     dogs: [
       {
-        name: "Whiskey",
-        age: 5,
-        src: whiskey,
-        facts: [
-          "Whiskey loves eating popcorn.",
-          "Whiskey is a terrible guard dog.",
-          "Whiskey wants to cuddle with you!"
-        ]
-      },
-      {
         name: "Hazel",
         age: 3,
         src: hazel,
@@ -34,13 +24,23 @@ function App() {
         ]
       },
       {
+        name: "Whiskey",
+        age: 5,
+        src: whiskey,
+        facts: [
+          "Whiskey loves eating popcorn.",
+          "Whiskey is a terrible guard dog.",
+          "Whiskey wants to cuddle with you!"
+        ]
+      },
+      {
         name: "Tubby",
-        age: 4,
+        age: 1,
         src: tubby,
         facts: [
-          "Tubby is not the brightest dog",
-          "Tubby does not like walks or exercise.",
-          "Tubby loves eating food."
+          "Tubby is rambunctious",
+          "Tubby loves tummy rubs.",
+          "Tubby loves pepperoni."
         ]
       }
     ]

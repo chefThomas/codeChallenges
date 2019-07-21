@@ -1,0 +1,47 @@
+.Dropdown-nav-hide {
+  display: none;
+}
+
+.DropdownNav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 5rem;
+  right: 0;
+  padding: 1rem;
+  background-color: #79c4b7;
+}
+
+.DropdownNav-close {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 1rem;
+  color: #efefef;
+  font-size: 0.8rem;
+}
+
+.DropdownNav:hover {
+  cursor: pointer;
+}
+
+.DropdownLink {
+  text-decoration: none;
+  text-transform: uppercase;
+  /* margin-right: 0.75rem; */
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: rgba(248, 248, 240, 0.9);
+  border-bottom: 1px dashed #79c4b7;
+  transition: all 0.1s ease-in-out;
+}
+
+.DropdownLink-active {
+  text-decoration: underline white;
+}
+/* 
+@media screen and (min-width: 700px) {
+  .DropdownNav {
+    display: none;
+  }
+} */

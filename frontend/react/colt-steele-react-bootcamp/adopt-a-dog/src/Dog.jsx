@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-// import whiskey from "./whiskey.jpeg";
-// import hazel from "./hazel.jpeg";
-// import tubby from "./tubby.jpeg";
+import { Redirect } from "react-router-dom";
+import "./Dog.css";
 
 export default class Dog extends Component {
   render() {
@@ -10,19 +9,35 @@ export default class Dog extends Component {
       return dog.name === dogName;
     });
 
+    if (dogArr.length < 1) {
+      return <Redirect to="/dogs" />;
+    }
+
     const { src, name, age, facts } = dogArr[0];
 
-    console.log(this.props);
+    const imgStyle = {
+      backgroundImage: `url(${src})`
+    };
+
     return (
       <div className="Dog">
-        <img className="Dog-image" src={src} alt={dogName} />
-        <h1 className="Dog-name">{name}</h1>
-        <p className="Dog-age">{age}</p>
-        <ul>
-          {facts.map(fact => (
-            <li>{fact}</li>
-          ))}
-        </ul>
+        <div className="Dog-left-content" style={imgStyle}>
+          {/* <img className="Dog-image" src={src} alt={dogName} /> */}
+        </div>
+        <div className="Dog-right-content">
+          <h2 className="Dog-right-content-header">
+            About {name}
+            <span className="ellipses">...</span>
+          </h2>
+          <ul className="Dog-facts-container">
+            <li className="Dog-facts">
+              {name} is {age} years old
+            </li>
+            {facts.map(fact => (
+              <li className="Dog-facts">{fact}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }
